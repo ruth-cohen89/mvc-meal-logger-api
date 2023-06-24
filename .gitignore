@@ -1,0 +1,7 @@
+*.env
+node_modules/
+.cache/
+*.pem
+.pem
+test.js
+cp.js
