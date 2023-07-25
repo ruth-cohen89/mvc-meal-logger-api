@@ -1,7 +1,5 @@
 const User = require("../models/UserModel");
 
-// Controller for handling user-related operations
-
 // Create a new user
 exports.createUser = async (req, res) => {
   try {

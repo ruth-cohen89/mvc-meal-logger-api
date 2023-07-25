@@ -1,4 +1,5 @@
 const Meal = require("../models/mealModel");
+const mongoose = require("mongoose");
 
 exports.getAllMeals = async (req, res) => {
   try {
@@ -11,10 +12,12 @@ exports.getAllMeals = async (req, res) => {
 
 exports.createMeal = async (req, res) => {
   try {
-    const { name, description } = req.body;
-    const meal = await Meal.create({ name, description });
+    const meal = await Meal.create(req.body);
     res.status(201).json(meal);
   } catch (error) {
+    if (error.name === "ValidationError") {
+      res.status(400).json({ error: error.message });
+    }
     res.status(500).json({ error: "Internal server error" });
   }
 };
@@ -22,7 +25,13 @@ exports.createMeal = async (req, res) => {
 exports.getMealById = async (req, res) => {
   try {
     const mealId = req.params.id;
-    const meal = await Meal.findById(mealId);
+    // Check if the mealId is a valid ObjectId
+    // if (!mongoose.Types.ObjectId.isValid(mealId)) {
+    //   return res.status(400).json({ error: "Invalid mealId format" });
+    // }
+
+    const meal = await Meal.findById({ _id: mealId });
+    console.log("forme", meal);
 
     if (!meal) {
       return res.status(404).json({ error: "Meal not found" });
@@ -30,6 +39,7 @@ exports.getMealById = async (req, res) => {
 
     res.json(meal);
   } catch (error) {
+    console.log(error.message);
     res.status(500).json({ error: "Internal server error" });
   }
 };
