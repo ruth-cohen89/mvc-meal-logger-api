@@ -25,13 +25,7 @@ exports.createMeal = async (req, res) => {
 exports.getMealById = async (req, res) => {
   try {
     const mealId = req.params.id;
-    // Check if the mealId is a valid ObjectId
-    // if (!mongoose.Types.ObjectId.isValid(mealId)) {
-    //   return res.status(400).json({ error: "Invalid mealId format" });
-    // }
-
-    const meal = await Meal.findById({ _id: mealId });
-    console.log("forme", meal);
+    const meal = await Meal.findById(mealId);
 
     if (!meal) {
       return res.status(404).json({ error: "Meal not found" });
@@ -39,7 +33,11 @@ exports.getMealById = async (req, res) => {
 
     res.json(meal);
   } catch (error) {
-    console.log(error.message);
+    if (error.name === "CastError" && error.kind === "ObjectId") {
+      return res
+        .status(404)
+        .json({ message: "Invalid or non-existent meal ID" });
+    }
     res.status(500).json({ error: "Internal server error" });
   }
 };
@@ -51,7 +49,12 @@ exports.updateMeal = async (req, res) => {
 
     const meal = await Meal.findByIdAndUpdate(
       mealId,
+      // only the fields specified in the updatedMeal object will be updated,
+      // and any other fields in the document will remain unchanged.
+      // set operator sets the fields of the document to the values specified
       { $set: updatedMeal },
+
+      // return the updated document after the update has been applied (and not the older)
       { new: true }
     );
 
@@ -61,6 +64,11 @@ exports.updateMeal = async (req, res) => {
 
     res.json(meal);
   } catch (error) {
+    if (error.name === "CastError" && error.kind === "ObjectId") {
+      return res
+        .status(404)
+        .json({ message: "Invalid or non-existent meal ID" });
+    }
     res.status(500).json({ error: "Internal server error" });
   }
 };
@@ -76,6 +84,11 @@ exports.deleteMeal = async (req, res) => {
 
     res.json({ message: "Meal deleted successfully" });
   } catch (error) {
+    if (error.name === "CastError" && error.kind === "ObjectId") {
+      return res
+        .status(404)
+        .json({ message: "Invalid or non-existent meal ID" });
+    }
     res.status(500).json({ error: "Internal server error" });
   }
 };
