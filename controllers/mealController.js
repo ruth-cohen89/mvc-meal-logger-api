@@ -1,15 +1,6 @@
 const Meal = require("../models/mealModel");
 const mongoose = require("mongoose");
 
-exports.getAllMeals = async (req, res) => {
-  try {
-    const meals = await Meal.find();
-    res.json(meals);
-  } catch (error) {
-    res.status(500).json({ error: "Internal server error" });
-  }
-};
-
 exports.createMeal = async (req, res) => {
   try {
     const meal = await Meal.create(req.body);
@@ -18,6 +9,15 @@ exports.createMeal = async (req, res) => {
     if (error.name === "ValidationError") {
       res.status(400).json({ error: error.message });
     }
+    res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+exports.getAllMeals = async (req, res) => {
+  try {
+    const meals = await Meal.find();
+    res.json(meals);
+  } catch (error) {
     res.status(500).json({ error: "Internal server error" });
   }
 };

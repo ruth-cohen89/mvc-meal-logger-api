@@ -1,6 +1,5 @@
 const User = require("../models/UserModel");
 
-// Create a new user
 exports.createUser = async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -17,6 +16,9 @@ exports.createUser = async (req, res) => {
 
     res.status(201).json(savedUser);
   } catch (error) {
+    if (error.name === "ValidationError") {
+      res.status(400).json({ error: error.message });
+    }
     res.status(500).json({ error: "Internal server error" });
   }
 };
@@ -44,6 +46,11 @@ exports.getUserById = async (req, res) => {
 
     res.json(user);
   } catch (error) {
+    if (error.name === "CastError" && error.kind === "ObjectId") {
+      return res
+        .status(404)
+        .json({ message: "Invalid or non-existent meal ID" });
+    }
     res.status(500).json({ error: "Internal server error" });
   }
 };
@@ -64,6 +71,11 @@ exports.updateUser = async (req, res) => {
 
     res.json(user);
   } catch (error) {
+    if (error.name === "CastError" && error.kind === "ObjectId") {
+      return res
+        .status(404)
+        .json({ message: "Invalid or non-existent meal ID" });
+    }
     res.status(500).json({ error: "Internal server error" });
   }
 };
@@ -81,6 +93,11 @@ exports.deleteUser = async (req, res) => {
 
     res.json({ message: "User deleted successfully" });
   } catch (error) {
+    if (error.name === "CastError" && error.kind === "ObjectId") {
+      return res
+        .status(404)
+        .json({ message: "Invalid or non-existent meal ID" });
+    }
     res.status(500).json({ error: "Internal server error" });
   }
 };

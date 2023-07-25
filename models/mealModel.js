@@ -21,5 +21,7 @@ const mealSchema = new mongoose.Schema({
   },
 });
 
+// creating a Mongoose model named Meal based on the defined schema.
+// This model allows to perform CRUD operations on the Meal collection in MongoDB.
 const Meal = mongoose.model("Meal", mealSchema);
 module.exports = Meal;
