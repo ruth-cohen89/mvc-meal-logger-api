@@ -1,5 +1,6 @@
 const User = require("../models/UserModel");
 
+// TODO: in all catch blocks replace the code with next(error)
 exports.createUser = async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -49,7 +50,7 @@ exports.getUserById = async (req, res) => {
     if (error.name === "CastError" && error.kind === "ObjectId") {
       return res
         .status(404)
-        .json({ message: "Invalid or non-existent meal ID" });
+        .json({ message: "Invalid or non-existent user ID" });
     }
     res.status(500).json({ error: "Internal server error" });
   }
@@ -74,7 +75,7 @@ exports.updateUser = async (req, res) => {
     if (error.name === "CastError" && error.kind === "ObjectId") {
       return res
         .status(404)
-        .json({ message: "Invalid or non-existent meal ID" });
+        .json({ message: "Invalid or non-existent user ID" });
     }
     res.status(500).json({ error: "Internal server error" });
   }
@@ -96,7 +97,7 @@ exports.deleteUser = async (req, res) => {
     if (error.name === "CastError" && error.kind === "ObjectId") {
       return res
         .status(404)
-        .json({ message: "Invalid or non-existent meal ID" });
+        .json({ message: "Invalid or non-existent user ID" });
     }
     res.status(500).json({ error: "Internal server error" });
   }

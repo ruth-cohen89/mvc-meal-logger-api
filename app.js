@@ -1,6 +1,7 @@
 const express = require("express");
 const userRouter = require("./routes/userRoutes");
 const mealRouter = require("./routes/mealRoutes");
+const errorHandler = require("./middlewares/errorHandler");
 
 const app = express();
 
@@ -17,13 +18,6 @@ app.all("*", (req, res, next) => {
   next(error);
 });
 
-app.use((err, req, res, next) => {
-  res.status(err.status || 500);
-  res.json({
-    error: {
-      message: err.message,
-    },
-  });
-});
+app.use(errorHandler);
 
 module.exports = app;

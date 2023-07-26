@@ -1,15 +1,17 @@
 const Meal = require("../models/mealModel");
 const mongoose = require("mongoose");
 
-exports.createMeal = async (req, res) => {
+// TODO: in all catch blocks replace the code with next(error)
+exports.createMeal = async (req, res, next) => {
   try {
     const meal = await Meal.create(req.body);
     res.status(201).json(meal);
   } catch (error) {
-    if (error.name === "ValidationError") {
-      res.status(400).json({ error: error.message });
-    }
-    res.status(500).json({ error: "Internal server error" });
+    // if (error.name === "ValidationError") {
+    //   res.status(400).json({ error: error.message });
+    // }
+    // res.status(500).json({ error: "Internal server error" });
+    next(error);
   }
 };
 
