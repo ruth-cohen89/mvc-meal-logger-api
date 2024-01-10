@@ -4,14 +4,10 @@ The application architecture is about users who can log their meals to the app. 
 
 <h2><B>Key Components:</B></h2> 
 
-* <B>Routes:</B> Establishes the API endpoints and connects them to the corresponding controllers.
-
-* <B>Controllers:</B> Handles the business logic and orchestrates data flow.
-
-* <B>Models:</B> Defines the data structure and interacts with the database.
-
-* <B>Middlewares:Implement additional functionalities in the request-response cycle. </B>
-
+- **Routes:** Establishes the API endpoints and connects them to the corresponding controllers.
+- **Controllers:** Handles the business logic and orchestrates data flow.
+- **Models:** Defines the data structure and interacts with the database.
+- **Middlewares:** Implement additional functionalities in the request-response cycle. </B>
 - **Server:** `server.js` - The entry point for starting the server.
 - **Application Configuration:** `app.js` - Initializes and configures the Express application.
 - **Package Configuration:** `package.json` - Describes your Node.js project, including dependencies and scripts.
