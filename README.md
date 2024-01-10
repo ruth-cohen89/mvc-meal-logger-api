@@ -2,6 +2,7 @@
 A minimalist backend application built with Node.js and Express, featuring a clean architecture with models, controllers, and routes. This lightweight backend serves as a foundational structure for handling simple data operations.
 
 <h2><B>Key Components:</B></h2> 
+
 * <B>Models:</B> Defines the data structure and interacts with the database.
 
 * <B>Controllers:</B> Handles the business logic and orchestrates data flow.
@@ -24,11 +25,17 @@ A minimalist backend application built with Node.js and Express, featuring a cle
 
 <h2><B>Project Structure:</B></h2> 
 ├── models/
+
 │   ├── exampleModel.js
+
 ├── controllers/
+
 │   ├── exampleController.js
+
 ├── routes/
+
 │   ├── exampleRoutes.js
+
 ├── index.js
 
 
