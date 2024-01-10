@@ -25,19 +25,18 @@ A minimalist backend application built with Node.js and Express, featuring a cle
 
 <h2><B>Project Structure:</B></h2> 
 
-`├── models/b `
-              
-`│   ├── exampleModel.js `
+`├── models/` <br>             
+`│   ├── exampleModel.js`
                
-`├── controllers/ `
+`├── controllers/`
 
-`│   ├── exampleController.js ` 
+`│   ├── exampleController.js` 
 
-`├── routes/ `
+`├── routes/`
 
-`│   ├── exampleRoutes.js `
+`│   ├── exampleRoutes.js`
 
-`├── index.j s `
+`├── index.js`
 
 
 
