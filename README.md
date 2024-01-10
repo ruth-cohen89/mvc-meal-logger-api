@@ -1,14 +1,20 @@
 <h1 align="center"><B> Simple Node.js Express Backend </B></h1> 
-A minimalist backend application built with Node.js and Express, featuring a clean architecture with models, controllers, and routes. This lightweight backend serves as a foundational structure for handling simple data operations.
-The application architecture is about users who can log their meals to the app. with 2 endpoints: users and meals.
+A minimalist backend application built with Node.js and Express, featuring a clean architecture with models, controllers, and routes. This lightweight backend serves as a foundational structure for handling simple data operations. <br>
+The application architecture is about users who can log their meals to the app. with 2 endpoints(objects): users and meals.
 
 <h2><B>Key Components:</B></h2> 
 
-* <B>Models:</B> Defines the data structure and interacts with the database.
+* <B>Routes:</B> Establishes the API endpoints and connects them to the corresponding controllers.
 
 * <B>Controllers:</B> Handles the business logic and orchestrates data flow.
-  
-* <B>Routes:</B> Establishes the API endpoints and connects them to the corresponding controllers.
+
+* <B>Models:</B> Defines the data structure and interacts with the database.
+
+* <B>Middlewares:Implement additional functionalities in the request-response cycle. </B>
+
+- **Server:** `server.js` - The entry point for starting the server.
+- **Application Configuration:** `app.js` - Initializes and configures the Express application.
+- **Package Configuration:** `package.json` - Describes your Node.js project, including dependencies and scripts.
 
 <h2><B>Usage:</B></h2> 
 
@@ -37,9 +43,11 @@ The application architecture is about users who can log their meals to the app. 
 
 `│   ├── exampleRoutes.js`
 
-`├── index.js`
+`├── app.js`
 
+`├── server.js`
 
+`├── package.json` 
 
 <h2><B>API Endpoints:</B></h2> 
 <B>'/api/example'</B> (GET, POST, PUT, DELETE): Perform basic CRUD operations.
