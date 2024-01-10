@@ -10,7 +10,9 @@ A minimalist backend application built with Node.js and Express, featuring a cle
 
 <h2><B>Usage:</B></h2> 
 * Easily extendable for small to medium-sized projects.
+
 * Provides a structured approach to handling data with separation of concerns.
+  
 * Ideal for quick prototyping and building lightweight APIs.
 
 <h2><B>Getting Started:</B></h2> 
