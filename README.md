@@ -1,5 +1,6 @@
 <h1 align="center"><B> Simple Node.js Express Backend </B></h1> 
 A minimalist backend application built with Node.js and Express, featuring a clean architecture with models, controllers, and routes. This lightweight backend serves as a foundational structure for handling simple data operations.
+The application architecture is about users who can log their meals to the app. with 2 endpoints: users and meals.
 
 <h2><B>Key Components:</B></h2> 
 
