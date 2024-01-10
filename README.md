@@ -9,6 +9,7 @@ A minimalist backend application built with Node.js and Express, featuring a cle
 * <B>Routes:</B> Establishes the API endpoints and connects them to the corresponding controllers.
 
 <h2><B>Usage:</B></h2> 
+
 * Easily extendable for small to medium-sized projects.
 
 * Provides a structured approach to handling data with separation of concerns.
