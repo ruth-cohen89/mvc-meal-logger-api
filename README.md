@@ -27,15 +27,15 @@ A minimalist backend application built with Node.js and Express, featuring a cle
 
 `├── models/
 
-│   ├── exampleModel.js`
+`│   ├── exampleModel.js`
 
 `├── controllers/
 
-│   ├── exampleController.js`
+`│   ├── exampleController.js`
 
 `├── routes/
 
-│   ├── exampleRoutes.js`
+`│   ├── exampleRoutes.js`
 
 `├── index.js`
 
