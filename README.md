@@ -3,7 +3,9 @@ A minimalist backend application built with Node.js and Express, featuring a cle
 
 <h2><B>Key Components:</B></h2> 
 * <B>Models:</B> Defines the data structure and interacts with the database.
+
 * <B>Controllers:</B> Handles the business logic and orchestrates data flow.
+  
 * <B>Routes:</B> Establishes the API endpoints and connects them to the corresponding controllers.
 
 <h2><B>Usage:</B></h2> 
