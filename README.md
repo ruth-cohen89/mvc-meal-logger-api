@@ -51,7 +51,9 @@ The application is a meal logger, enabling users to log their meals into the app
 
 <h2><B>API Endpoints:</B></h2> 
 <B>'/api/meals'</B> 
+
 <B>'/api/users'</B>
+
 (GET, POST, PUT, DELETE): Perform basic CRUD operations.
 
 <h2><B>Contributing:</B></h2> 
