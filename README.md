@@ -26,6 +26,7 @@ The application is a meal logger, enabling users to log their meals into the app
 * Ideal for quick prototyping and building lightweight APIs.
 
 <h2><B>Getting Started:</B></h2> 
+
 1. Clone the repository.
 
 2. Install dependencies using npm install.
@@ -49,7 +50,9 @@ The application is a meal logger, enabling users to log their meals into the app
 `├── package.json` 
 
 <h2><B>API Endpoints:</B></h2> 
-<B>'/api/example'</B> (GET, POST, PUT, DELETE): Perform basic CRUD operations.
+<B>'/api/meals'</B> 
+<B>'/api/users'</B>
+(GET, POST, PUT, DELETE): Perform basic CRUD operations.
 
 <h2><B>Contributing:</B></h2> 
 Feel free to contribute and enhance the simplicity and functionality of this project. Fork the repository, make your changes, and submit a pull request.
