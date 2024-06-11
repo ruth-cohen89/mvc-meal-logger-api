@@ -34,15 +34,10 @@ The application architecture is about users who can log their meals to the app. 
 <h2><B>Project Structure:</B></h2> 
 
 `├── models/` <br>             
-`│   ├── exampleModel.js`
                
 `├── controllers/`
 
-`│   ├── exampleController.js` 
-
 `├── routes/`
-
-`│   ├── exampleRoutes.js`
 
 `├── app.js`
 
