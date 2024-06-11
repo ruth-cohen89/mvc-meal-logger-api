@@ -1,4 +1,4 @@
-<h1 align="center"><B> MVC Backend Template</B></h1> 
+<h1 align="center"><B> MVC Meal Logger API</B></h1> 
 The purpose of the application is to demonstrate a basic, clean backend API using the MVC architecture.
 
 This minimalist backend application is built with Node.js and Express, featuring a clean architecture with the MVC (Model-View-Controller) pattern, including models, controllers, and routes.
