@@ -1,5 +1,6 @@
 <h1 align="center"><B> MVC Backend Template</B></h1> 
-The purpose of the application is to demonstrate a basic, clean backend API using the MVC architecture. This minimalist backend application is built with Node.js and Express, featuring a clean architecture with the MVC (Model-View-Controller) pattern, including models, controllers, and routes. It provides a lightweight foundational structure for handling simple data operations.
+The purpose of the application is to demonstrate a basic, clean backend API using the MVC architecture. 
+This minimalist backend application is built with Node.js and Express, featuring a clean architecture with the MVC (Model-View-Controller) pattern, including models, controllers, and routes. It provides a lightweight foundational structure for handling simple data operations.
 <br>
 
 The application architecture is about users who can log their meals to the app. with 2 endpoints(objects): users and meals.
