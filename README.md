@@ -4,7 +4,7 @@ The purpose of the application is to demonstrate a basic, clean backend API usin
 This minimalist backend application is built with Node.js and Express, featuring a clean architecture with the MVC (Model-View-Controller) pattern, including models, controllers, and routes.
 It provides a lightweight foundational structure for handling simple data operations.
 
-The application architecture is about users who can log their meals to the app. with 2 endpoints(objects): users and meals.
+The application is a meal logger, enabling users to log their meals into the app and edit them, it has 2 objects: users and meals.
 <br>
 
 <h2><B>Key Components:</B></h2> 
