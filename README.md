@@ -27,9 +27,12 @@ The application is a meal logger, enabling users to log their meals into the app
 
 <h2><B>Getting Started:</B></h2> 
 1. Clone the repository.
+
 2. Install dependencies using npm install.
-3. Configure your database connection.
-4. Start the server with npm start.
+   
+4. Configure your database connection.
+   
+6. Start the server with npm start.
 
 <h2><B>Project Structure:</B></h2> 
 
